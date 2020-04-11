@@ -1,0 +1,16 @@
+keshavkummari@Keshavs-MacBook-Pro ~ % aws2 --version
+aws-cli/2.0.0dev3 Python/3.7.4 Darwin/19.4.0 botocore/2.0.0dev2
+keshavkummari@Keshavs-MacBook-Pro ~ % 
+keshavkummari@Keshavs-MacBook-Pro ~ % 
+keshavkummari@Keshavs-MacBook-Pro ~ % aws2 configure --profile slearn 
+AWS Access Key ID [None]: 
+AWS Secret Access Key [None]: 
+Default region name [us-east-1]: 
+Default output format [table]: 
+keshavkummari@Keshavs-MacBook-Pro ~ % aws2 configure --profile slearn
+AWS Access Key ID [None]: AKIA2SUFPXJ546CCO4MA
+AWS Secret Access Key [None]: 54K10A6MplTS15owF+vfrEclunkwx9nb1Tl6O
+Default region name [us-east-1]: us-east-1
+Default output format [table]: json
+keshavkummari@Keshavs-MacBook-Pro ~ % 
+keshavkummari@Keshavs-MacBook-Pro ~ % aws2 iam list-users --profile slearn

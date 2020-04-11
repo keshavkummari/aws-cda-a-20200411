@@ -1,0 +1,42 @@
+Agenda :
+
+1. Introduction 
+2. LMS
+3. About AWS Certified Developer Associate Course 
+4. Understanding about Simplilearn Training & Certification & AWS Certification
+5. AWS Global Infrastructure
+    1. Regions
+    2. Availability Zones
+        1. Data Centers 
+    3. PoP CDN 
+    
+6. AWS Services Walk through 
+
+7. AWS Global Services and Region Services 
+    Region : EC2 
+        EC2 : 
+            Instance :
+                1. windows
+                2. Linux 
+                
+8. Compute --> EC2 --> Instance :
+    1. GUI
+    2. CLI
+    3. Script 
+
+9. List of Softwares were used part of this Training :
+    Git :
+    https://git-scm.com/
+
+    IDE Tool:
+    https://code.visualstudio.com/
+
+    AWS CLI :
+    https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-windows.html
+
+    SCM / VCS :
+    https://github.com/
+
+
+10. Q & A
+

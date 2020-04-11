@@ -1,0 +1,24 @@
+
+https://portal.aws.amazon.com/billing/signup?redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start
+
+
+AWS Global infrastructure :
+
+https://infrastructure.aws/
+
+https://aws.amazon.com/about-aws/global-infrastructure/
+
+https://aws.amazon.com/certification/
+
+https://aws.amazon.com/certification/certified-developer-associate/
+
+https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS_Certified_Developer_Associate-Exam_Guide_EN_1.4.pdf
+
+https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS_Certified_Developer-Associate_Sample_Questions_v2.0_FINAL.pdf
+
+https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS_Certified_Developer_Associate-Exam_Guide_EN_1.4.pdf
+
+https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS_Certified_Developer-Associate_Sample_Questions_v2.0_FINAL.pdf
+
+https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc
+
