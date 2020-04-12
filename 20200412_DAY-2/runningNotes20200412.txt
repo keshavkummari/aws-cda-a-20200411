@@ -1,0 +1,247 @@
+Agenda :
+
+Region Services & Global Services :
+
+Region Services : EC2, VPC 
+
+Global Services : IAM, Route53  
+
+AWS --> Services ---> Compute ---> EC2 
+
+1. Launch a Linux Instance Using GUI & CLI
+2. Launch a Windows Instance Using GUI & CLI
+    1. AMI : Type Of AMI : Windows : UserName : Administrator
+    2. AMI : Type Of AMI : Linux(AmazonLinux) : UserName : ec2-user 
+    3. AMI : Type Of AMI : Linux(Ubuntu) : UserName : ubuntu  
+
+SSH Keys :
+    1. Public 
+    2. Private
+
+
+2a . User Data / BootStrap
+
+3. VPC :
+    3.1 IGW
+    3.2 RTB
+    3.3 Subnets
+    3.4 NAT Gateway
+    3.5 NACL
+    3.6 Security Group
+    3.7 Bastion Server 
+    3.8 WebServers
+
+
+aws2 ec2 run-instances --image-id ami-09d496c26aa745869 --count 1 --instance-type t2.micro --key-name slearn_aws_cda --security-group-ids sg-0d1c9ac54d3976ffe
+
+aws ec2 run-instances --image-id ami-09d496c26aa745869 --count 1 --instance-type t2.micro --key-name slearn_aws_cda --security-groups sg-0d1c9ac54d3976ffe
+
+Windows_Server-2019-English-Full-Base-2020.03.18 ()
+
+aws ec2 run-instances --image-id "ami-09d496c26aa745869" --count 1 --instance-type "t2.micro" --key-name "slearn_aws_cda" --security-group-ids "sg-0d1c9ac54d3976ffe" --subnet-id "subnet-9a21bab4" --profile user1
+
+
+Administrator@EC2AMAZ-D0K2UPE MINGW64 ~
+$ aws ec2 run-instances --image-id "ami-09d496c26aa745869" --count 1 --instance-type "t2.micro" --key-name "slearn_aws_cda" --security-group-ids "sg-0d1c9ac54d3976ffe" --subnet-id "subnet-9a21bab4"
+
+
+$ aws ec2 run-instances --image-id "ami-07ebfd5b3428b6f4d" --count 1 --instance-type "t2.micro" --key-name "slearn_aws_cda" --security-group-ids "sg-0a8e2b474f1ce0566" --subnet-id "subnet-9a21bab4"
+$ aws ec2 run-instances --image-id "ami-07ebfd5b3428b6f4d" --count 1 --instance-type "t2.micro" --key-name "slearn_aws_cda" --security-group-ids "sg-0a8e2b474f1ce0566" --subnet-id "subnet-9a21bab4"
+$ aws ec2 run-instances --image-id "ami-07ebfd5b3428b6f4d" --count 1 --instance-type "t2.micro" --key-name "slearn_aws_cda" --security-group-ids "sg-0a8e2b474f1ce0566" --subnet-id "subnet-9a21bab4"
+
+
+
+Last login: Sun Apr 12 20:56:51 on ttys002
+keshavkummari@Keshavs-MacBook-Pro ~ % pwd
+/Users/keshavkummari
+keshavkummari@Keshavs-MacBook-Pro ~ % cd Downloads 
+keshavkummari@Keshavs-MacBook-Pro Downloads % 
+keshavkummari@Keshavs-MacBook-Pro Downloads % ls -lrt slearn_aws_cda.pem
+-rw-r--r--@ 1 keshavkummari  staff  1692 Apr 12 20:15 slearn_aws_cda.pem
+keshavkummari@Keshavs-MacBook-Pro Downloads % 
+keshavkummari@Keshavs-MacBook-Pro Downloads % # User : rw-
+zsh: command not found: #
+keshavkummari@Keshavs-MacBook-Pro Downloads % # Group : r--
+zsh: command not found: #
+keshavkummari@Keshavs-MacBook-Pro Downloads % 
+keshavkummari@Keshavs-MacBook-Pro Downloads % # Other : r--
+zsh: command not found: #
+keshavkummari@Keshavs-MacBook-Pro Downloads % # r = Read , w = Write , - No Permission
+zsh: command not found: #
+keshavkummari@Keshavs-MacBook-Pro Downloads % # User has Read & Write 
+[1] 1416
+zsh: command not found: #
+[1]  + exit 127   # User has Read
+usage: write user [tty]
+keshavkummari@Keshavs-MacBook-Pro Downloads % # User : r--
+zsh: command not found: #
+keshavkummari@Keshavs-MacBook-Pro Downloads % # Group : r--
+zsh: command not found: #
+keshavkummari@Keshavs-MacBook-Pro Downloads % # Other : r--
+zsh: command not found: #
+keshavkummari@Keshavs-MacBook-Pro Downloads % chmod 400 slearn_aws_cda.pem 
+keshavkummari@Keshavs-MacBook-Pro Downloads % 
+keshavkummari@Keshavs-MacBook-Pro Downloads % ls -lrt slearn_aws_cda.pem 
+-r--------@ 1 keshavkummari  staff  1692 Apr 12 20:15 slearn_aws_cda.pem
+keshavkummari@Keshavs-MacBook-Pro Downloads % 
+keshavkummari@Keshavs-MacBook-Pro Downloads % chmod 444 slearn_aws_cda.pem 
+keshavkummari@Keshavs-MacBook-Pro Downloads % 
+keshavkummari@Keshavs-MacBook-Pro Downloads % ls -lrt slearn_aws_cda.pem  
+-r--r--r--@ 1 keshavkummari  staff  1692 Apr 12 20:15 slearn_aws_cda.pem
+keshavkummari@Keshavs-MacBook-Pro Downloads % 
+keshavkummari@Keshavs-MacBook-Pro Downloads % 
+keshavkummari@Keshavs-MacBook-Pro Downloads % ssh -i slearn_aws_cda.pem ubuntu@54.172.103.146 
+The authenticity of host '54.172.103.146 (54.172.103.146)' can't be established.
+ECDSA key fingerprint is SHA256:m/RJ3oeaxLzhxexCBPHUS6Hb90hHNJjqtaHdovINWQg.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '54.172.103.146' (ECDSA) to the list of known hosts.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0444 for 'slearn_aws_cda.pem' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "slearn_aws_cda.pem": bad permissions
+ubuntu@54.172.103.146: Permission denied (publickey).
+keshavkummari@Keshavs-MacBook-Pro Downloads % chmod 400 slearn_aws_cda.pem
+keshavkummari@Keshavs-MacBook-Pro Downloads % 
+keshavkummari@Keshavs-MacBook-Pro Downloads % ls -lrt slearn_aws_cda.pem                      
+-r--------@ 1 keshavkummari  staff  1692 Apr 12 20:15 slearn_aws_cda.pem
+keshavkummari@Keshavs-MacBook-Pro Downloads % 
+keshavkummari@Keshavs-MacBook-Pro Downloads % ssh -i slearn_aws_cda.pem ubuntu@54.172.103.146 
+Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-1057-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun Apr 12 16:12:23 UTC 2020
+
+  System load:  0.0               Processes:           86
+  Usage of /:   13.6% of 7.69GB   Users logged in:     0
+  Memory usage: 15%               IP address for eth0: 172.31.85.110
+  Swap usage:   0%
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-85-110:~$ Connection to 54.172.103.146 closed by remote host.
+Connection to 54.172.103.146 closed.
+keshavkummari@Keshavs-MacBook-Pro Downloads % 
+
+
+
+ 
+
+
+https://docs.aws.amazon.com/cli/latest/reference/ec2/
+
+Cloud Services Company :
+
+    - slearn 
+
+Cloud Solutions :
+
+    1. Migration  : Type of Migration : 
+    2. Automation
+    3. DevOps CI/CD Pipeline setup  : Type of Deployment 
+
+Client - BMW 
+
+Client - AUDI 
+
+On-Premises :
+    BMW :
+        Sales : https://bmw.com  (On-Premises) | Java 1.8 | Java 11 | Oracle ----> python -- Aurora 
+
+            100 (Virtual Machines - Linux OS & 50 Database )
+            Container : Docker
+            Container Orachestration  : Kubernetes 
+            Infrastructure as a code : Terraform , Python With Boto3 , CloudFormation
+
+
+        Service : 
+        Finance
+        Hr
+        Marketing 
+100 
+
+
+Application : Java 
+
+Build Tool : Maven 
+
+Type of Application : Sales / Promotion 
+
+Type of Domain : Manufacturing 
+
+What is the Application Architecture : 1 Tier, 2 Tier, 3 Tier , n Tier 
+
+3 Tier :
+    1. Web Layer
+    2. App Layer 
+    3. DB Layer 
+
+DESIGNING ARCHITECTURES ON AWS :
+
+1-Tier Architecture
+
+2-Tier Architecture
+
+3-Tier Architecture
+
+N-Tier Architecture
+
+WELL-ARCHITECTED FRAMEWORK
+
+1. Operational Excellence
+
+2. Security
+
+3. Reliability
+
+4. Performance Efficiency
+
+5. Cost Optimisation
+
+6. HA 
+
+7. DR 
+
+8. Fault Tolarent 
+
+Migration Types :
+
+1. Rehosting        : Lift and Shift  
+2. Replatforming    : Lift & Reshape [Lift-Tinker-And-Shift]  (Oracle --- MySQL|Aurora)
+3. Repurchasing     : Replace, Drop & Shop 
+4. Refactoring      : Re-Writing / Decoupling Applications 
+5. Retire           : Get rid of 
+6. Retain           : Usally this means "revisit" or do nothing 
+
+Deployment Strategies :
+
+1. Recreate : Version-A is terminated then Version-B is rolled out 
+
+2. Ramped (Also known as rolling-update or Incremental) : Version-B is slowly rolled out and replacing Version-A 
+
+3. Blue/Green : Version-B is released alongside version-A, then the traffic is switeched to Version-B 
+
+4. Canary : Version-B is released to a Subset of Users, then proceed to a full rollout. 
+
+5. A/B Testing : Version-B is released to a Subset of users under specific condition. 
+
+6. Shadow : Version-B receives real-world traffic alongside Version-A and doesn't impact the response 
+

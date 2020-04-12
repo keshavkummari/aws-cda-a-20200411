@@ -25,6 +25,7 @@ Agenda :
     3. Script 
 
 9. List of Softwares were used part of this Training :
+
     Git :
     https://git-scm.com/
 
