@@ -1,0 +1,46 @@
+Agenda :
+
+3. VPC :
+    3.1 IGW
+    3.2 RTB
+    3.3 Subnets
+    3.4 NAT Gateway
+    3.5 NACL
+    3.6 Security Group
+    3.7 Bastion Server 
+    3.8 WebServers
+
+
+BMW :
+
+Today : 1000 Users 
+
+65,536
+
+VPC  10.0.0.0/16 = 65,536 
+
+1. Subnets : 
+
+65536 / 256 = 256 Subnets in a Custom VPC 
+
+In Each Subnet : 256 - 5 = 251 Servers(Linux | Windows)
+
+
+1 Instance (t2.micro | 1 core processor | 1 gb RAM )  : 46  users X 65400 
+
+https://github.com/keshavkummari/codewithckk
+
+
+Application Load Balancer :
+
+User data For :
+
+#!/bin/bash
+sudo apt-get update -y 
+sudo  apt-get install vim curl wget unzip tree git -y 
+sudo apt-get -y install apache2 
+cd /var/www/html/
+echo "Welcome t
+cd /var/www/html/codewithckk/
+sudo mv * /var/www/html/ 
+
