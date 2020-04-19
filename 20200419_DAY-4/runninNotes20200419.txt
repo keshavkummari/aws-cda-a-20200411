@@ -1,0 +1,40 @@
+Agenda : 
+
+Network Load Balancer
+Route53
+Elastic Beanstalk
+IAM
+S3
+
+
+Network Load Balancer :
+
+- Layer4 of OSI Model 
+- Forward TCP traffic to your instances
+- Handle Millions of Request per Seconds 
+- Support for StaticIP or Elastic IP 
+- Ultra Low Latency 
+- For extreme performance and should not be the default load balancer 
+
+
+Host a Web Application on AWS ?
+
+Code with US (https://github.com/keshavkummari/codewithckk.git)
+
+Purchase a Domain Name : 
+
+IPV4 ,
+IPV6 ,
+Global DNS etc... (IANA)
+
+Domain Name / Hostname : keshavkummari.com from IANA 
+
+Domain Sellers :
+    - Godaddy
+    - AWS
+    - AZURE 
+    - GCP
+    - Hostgator etc.......
+
+Domain Name : codewithckk.com from Godaddy 
+
