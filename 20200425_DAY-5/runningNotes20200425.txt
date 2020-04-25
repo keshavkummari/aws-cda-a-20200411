@@ -1,0 +1,8 @@
+Agenda :
+
+1. IAM
+
+2. Database
+
+3. Storage - EFS 
+

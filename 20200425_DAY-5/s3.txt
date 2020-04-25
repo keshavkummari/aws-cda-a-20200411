@@ -1,0 +1,27 @@
+Storage :
+
+S3
+EFS
+FSx
+S3 Glacier
+Storage Gateway
+AWS Backup
+
+s3 :
+
+- Describe Simple Storage Service
+
+- Identify different Storage Classes in s3
+
+- Define Version Control and Lifecycle Management
+
+- Define Buckets, ACLs and User Policies
+
+- Host a Static Website on s3 
+
+- Define Cross Origin Resource Sharing 
+
+- Define Tagging, Analytics, and Cloud-Watch metrics with S3 
+
+EFS : Elastic File System 
+
